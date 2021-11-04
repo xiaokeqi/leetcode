@@ -20,3 +20,24 @@ function buble(arr) {
 }
 
 buble([2,4,1,5,6])
+
+function buble2(arr) {
+  let len = arr.length
+  let flag = false
+  for (let i =0; i < len; i++){
+    for (let j =0; j < len -1 -i; j++){
+      if (arr[j] > arr[j+1]) {
+        let temp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+        flag = true
+      }
+    }
+    console.log(arr)
+    if (!flag) return arr
+  }
+  console.log(arr)
+  return arr
+}
+
+buble2([1,2,3,4,5,6])
